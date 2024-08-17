@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Page</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow: hidden;
+            position: relative;
+            background-image: url('MENU.png');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .option-container {
+            position: absolute;
+            top: 485.64px;
+            left: -2px;
+            display: flex;
+            gap: 10px; /* Проміжок між зображеннями */
+        }
+
+        .option-container img {
+            cursor: pointer;
+        }
+
+        .overlay-image {
+            position: absolute;
+            display: none;
+            z-index: 10;
+        }
+
+        #btn_main {
+            position: absolute;
+            left: 21px;
+            top: 723.34px;
+            cursor: pointer;
+        }
+    </style>
+    <script>
+        function showOverlay(overlayId) {
+            document.getElementById(overlayId).style.display = 'block';
+        }
+
+        function navigateToAdres() {
+            window.location.href = 'adres.html';
+        }
+    </script>
+</head>
+<body>
+    <div class="option-container">
+        <img src="option.png" alt="option" onclick="showOverlay('auto1')">
+        <img src="option(1).png" alt="option(1)" onclick="showOverlay('auto2')">
+        <img src="delivery.png" alt="delivery" onclick="showOverlay('auto3')">
+    </div>
+
+    <img src="auto-1.png" id="auto1" class="overlay-image" style="left: -2px; top: 485.64px;">
+    <img src="auto-2.png" id="auto2" class="overlay-image" style="left: calc(-2px + 327px + 10px); top: 485.64px;">
+    <img src="auto-3.png" id="auto3" class="overlay-image" style="left: calc(-2px + 2*(327px + 10px)); top: 485.64px;">
+
+    <img src="btn_main.png" id="btn_main" onclick="navigateToAdres()">
+</body>
+</html>
