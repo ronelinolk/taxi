@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Start Page</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        .full-screen-image {
+            background-image: url('start_image.png');
+            background-size: cover;
+            background-position: center;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+
+        .button-image {
+            position: absolute;
+            left: calc(50% - 163.5px); /* 50% від ширини екрану мінус половина ширини кнопки */
+            top: 681px;
+            width: 327px;
+            height: 56px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="full-screen-image">
+        <img src="Button.png" alt="Button" class="button-image" onclick="window.location.href='home.html';">
+    </div>
+</body>
+</html>
